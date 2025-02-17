@@ -110,6 +110,7 @@ public partial class User011Context : DbContext
             entity.Property(e => e.Description)
                 .HasColumnType("character varying")
                 .HasColumnName("description");
+            entity.Property(e => e.IdMainpepartment).HasColumnName("id_mainpepartment");
             entity.Property(e => e.Name)
                 .HasColumnType("character varying")
                 .HasColumnName("name");
@@ -117,6 +118,10 @@ public partial class User011Context : DbContext
             entity.HasOne(d => d.DepartmentDirectorNavigation).WithMany(p => p.Departments)
                 .HasForeignKey(d => d.DepartmentDirector)
                 .HasConstraintName("department_employee_fk");
+
+            entity.HasOne(d => d.IdMainpepartmentNavigation).WithMany(p => p.InverseIdMainpepartmentNavigation)
+                .HasForeignKey(d => d.IdMainpepartment)
+                .HasConstraintName("department_department_fk");
 
             entity.HasMany(d => d.LowerDeps).WithMany(p => p.MainDeps)
                 .UsingEntity<Dictionary<string, object>>(

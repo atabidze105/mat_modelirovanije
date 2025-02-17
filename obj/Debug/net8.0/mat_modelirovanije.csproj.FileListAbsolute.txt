@@ -213,3 +213,4 @@ C:\Users\prdb\source\repos\mat_modelirovanije\bin\Debug\net8.0\Northwoods.GoDiag
 C:\Users\prdb\source\repos\mat_modelirovanije\bin\Debug\net8.0\Northwoods.GoDiagram.Avalonia.TreeLayout.dll
 C:\Users\prdb\source\repos\mat_modelirovanije\bin\Debug\net8.0\Northwoods.GoDiagram.Avalonia.dll
 C:\Users\prdb\source\repos\mat_modelirovanije\bin\Debug\net8.0\SkiaSharp.Extended.Svg.dll
+C:\Users\prdb\source\repos\mat_modelirovanije\obj\Debug\net8.0\mat_modelirovanije.sourcelink.json

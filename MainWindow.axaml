@@ -16,7 +16,6 @@
 		<go:DiagramControl
 			Grid.Column="1" Grid.Row="1"
 			Name="diagramControl"
-			Width="400" Height="150"
 			Margin="5"
 			BorderBrush="Black" BorderThickness="1"
 			Background="LightGray" />
