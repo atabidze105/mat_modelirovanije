@@ -1,4 +1,4 @@
-<Window 
+<Window
 	xmlns="https://github.com/avaloniaui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,16 +8,79 @@
 	Title="mat_modelirovanije"
 	x:CompileBindings="False"
 	xmlns:go="using:Northwoods.Go.Avalonia">
-	
+
 	<Grid
-		ShowGridLines="True"
+		ShowGridLines="False"
 		RowDefinitions="auto,*,auto"
-		ColumnDefinitions="auto,*,auto">
+		ColumnDefinitions="auto,*,*,auto">
+		<Panel
+			Grid.ColumnSpan="3"
+			Background="#e1f4c8">
+			<Grid
+				ColumnDefinitions="auto,20*,4*">
+				<Ellipse
+					Height="50" Fill="Green" Width="50" Margin="10 5"/>
+				<TextBlock
+					Text="логотип" FontSize="10" HorizontalAlignment="Center"
+					VerticalAlignment="Center"/>
+				<Border
+					Grid.Column="1" Margin="10 5" CornerRadius="18"
+					Background="White" Height="40">
+					<TextBlock
+						Text="Организационная структура" Margin="10"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center"/>
+				</Border>
+			</Grid>
+		</Panel>
 		<go:DiagramControl
 			Grid.Column="1" Grid.Row="1"
 			Name="diagramControl"
-			Margin="5"
+			Margin="10"
 			BorderBrush="Black" BorderThickness="1"
-			Background="LightGray" />
+			Background="LightGray">
+			<go:DiagramControl.Diagram>
+			</go:DiagramControl.Diagram>
+		</go:DiagramControl>
+
+		<ListBox
+			Name="lbox_employee"
+			Grid.Column="2" Grid.Row="1" Margin="10">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border
+						Background="#e1f4c8">
+						<StackPanel
+							Margin="5">
+							<TextBlock
+								FontSize="12" TextWrapping="WrapWithOverflow"
+								Margin="5">
+								<Run Text="{Binding Department.Name}"/>
+								<Run Text=" — "/>
+								<Run Text="{Binding Job.Name}"/>
+							</TextBlock>
+							<TextBlock
+								FontSize="16" TextWrapping="WrapWithOverflow"
+								Margin="5">
+								<Run Text="{Binding Lastname}"/>
+								<Run Text="{Binding Name}"/>
+								<Run Text="{Binding Patronymic}"/>
+							</TextBlock>
+							<TextBlock
+								FontSize="14" TextWrapping="WrapWithOverflow"
+								Margin="5">
+								<Run Text="{Binding Phone}"/>
+								<Run Text="{Binding Email}"/>
+							</TextBlock>
+						</StackPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Button
+			Grid.Column="2" Grid.Row="1" Background="#e1f4c8"
+			Content="+" FontSize="26" Width="50" Height="50" BorderBrush="Black"
+			HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+			HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20"/>
 	</Grid>
 </Window>

@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{54334053-D973-4F33-9A0E-C5CF6145D167}|mat_modelirovanije.csproj|c:\\users\\prdb\\source\\repos\\mat_modelirovanije\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{54334053-D973-4F33-9A0E-C5CF6145D167}|mat_modelirovanije.csproj|solutionrelative:mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54334053-D973-4F33-9A0E-C5CF6145D167}|mat_modelirovanije.csproj|c:\\users\\prdb\\source\\repos\\mat_modelirovanije\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54334053-D973-4F33-9A0E-C5CF6145D167}|mat_modelirovanije.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +29,7 @@
               "ToolTip": "C:\\Users\\prdb\\source\\repos\\mat_modelirovanije\\MainWindow.axaml",
               "RelativeToolTip": "MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-17T12:29:00.598Z",
+              "WhenOpened": "2025-02-18T06:12:02.915Z",
               "EditorCaption": ""
             },
             {
@@ -44,22 +40,9 @@
               "RelativeDocumentMoniker": "MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\prdb\\source\\repos\\mat_modelirovanije\\MainWindow.axaml.cs*",
               "RelativeToolTip": "MainWindow.axaml.cs*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAmwFYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwC4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T12:28:59.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\mat_modelirovanije\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "Models\\Department.cs",
-              "ToolTip": "C:\\Users\\prdb\\source\\repos\\mat_modelirovanije\\Models\\Department.cs",
-              "RelativeToolTip": "Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:28:49.606Z",
               "EditorCaption": ""
             }
           ]
