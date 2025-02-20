@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace mat_modelirovanije.Models;
 
@@ -19,7 +20,7 @@ public partial class Employee
 
     public string Room { get; set; } = null!;
 
-    public string Email { get; set; } = null!;
+    [EmailAddress]    public string Email { get; set; } = null!;
 
     public int JobId { get; set; }
 

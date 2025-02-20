@@ -1,0 +1,138 @@
+<Window 
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="900"
+	Height="900"
+	x:Class="mat_modelirovanije.RedWindow"
+	Title="RedWindow"
+	x:CompileBindings="False"
+	WindowStartupLocation="CenterScreen">
+	<Grid
+		Name="grid_red"
+		ShowGridLines="False"
+		RowDefinitions="auto,*,auto"
+		ColumnDefinitions="auto,*,*,auto">
+			<Panel
+				Grid.ColumnSpan="3"
+				Background="#e1f4c8">
+				<Grid
+					ColumnDefinitions="auto,20*,4*">
+					<Ellipse
+						Height="50" Fill="Green" Width="50" Margin="10 5"/>
+					<TextBlock
+						Text="логотип" FontSize="10" HorizontalAlignment="Center"
+						VerticalAlignment="Center"/>
+					<Border
+						Grid.Column="1" Margin="10 5" CornerRadius="18"
+						Background="White" Height="40">
+						<TextBlock
+							Text="Карточка сотрудника" Margin="10"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"/>
+					</Border>
+				</Grid>
+			</Panel>
+		<StackPanel
+			Grid.Row="1" Grid.Column="1">
+			<TextBlock
+				Text="ФИО:" Margin="5"/>
+			<TextBox
+				Text="{Binding Lastname}" Watermark="Фамилия" Margin="5"/>
+			<TextBox
+				Text="{Binding Name}" Watermark="Имя" Margin="5"/>
+			<TextBox
+				Text="{Binding Patronymic}" Watermark="Отчество" Margin="5"/>
+			<TextBlock
+				Text="Мобильный телефон:" Margin="5"/>
+			<MaskedTextBox
+				Mask="+7(000)000-00-00"
+				Text="{Binding PhonePrivate}" Margin="5"/>
+			<TextBlock
+				Text="Дата рождения:" Margin="5"/>
+			<CalendarDatePicker
+				Name="cdatepicker_bday" Margin="5"/>
+			<TextBlock
+				Text="Отдел:" Margin="5"/>
+			<ComboBox
+				Name="cbox_department" SelectedItem="{Binding Department}"
+				Margin="5" SelectionChanged="Department_SelectionChanged">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Name}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<TextBlock
+				Text="Должность:" Margin="5"/>
+			<ComboBox
+				Name="cbox_job" SelectedItem="{Binding Job}"
+				Margin="5">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Name}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<TextBlock
+				Text="Руководитель:" Margin="5"/>
+			<ComboBox
+				Name="cbox_supervisor" SelectedItem="{Binding SupervisorNavigation}"
+				Margin="5">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock>
+							<Run Text="{Binding Lastname}"/>
+							<Run Text="{Binding Name}"/>
+							<Run Text="{Binding Patronymic}"/>
+						</TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<TextBlock
+				Text="Помощник:" Margin="5"/>
+			<ComboBox
+				Name="cbox_assistant" SelectedItem="{Binding AssistantNavigation}"
+				Margin="5">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock>
+							<Run Text="{Binding Lastname}"/>
+							<Run Text="{Binding Name}"/>
+							<Run Text="{Binding Patronymic}"/>
+						</TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<TextBlock
+				Text="Рабочий телефон:" Margin="5"/>
+			<MaskedTextBox
+				Mask="+7(000)000-00-00"
+				Text="{Binding Phone}" Margin="5"/>
+			<TextBox
+				Name="tbox_email"
+				Text="{Binding Email}" Watermark="Адрес электронной почты" Margin="5"/>
+			<TextBox
+				Text="{Binding Room}" Watermark="Кабинет" Margin="5" MaxLength="10"/>
+			
+		</StackPanel>
+		<Button
+			Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+			Content="Назад" Background="#e1f4c8" BorderBrush="Black"
+			Margin="10"
+			Click="BackToMainWindow"/>
+		<Button
+			Name="btn_del" IsVisible="False"
+			Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+			Content="Уволить" Background="#e1f4c8" BorderBrush="Black"
+			Margin="10" HorizontalAlignment="Center"
+			Click="Delete"/>
+		<Button
+			Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+			Content="Сохранить" Background="#e1f4c8" BorderBrush="Black"
+			Margin="10" HorizontalAlignment="Right"
+			Click="Confirm"/>
+	</Grid>
+
+</Window>
